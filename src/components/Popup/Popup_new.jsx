@@ -15,18 +15,15 @@ function Popup({ active, setIsPopup, y }) {
     const [email, setEmail] = useState('');
     const [checkbox, setCheckbox] = useState(false)
 
-    function hundleCheckBox () {
+
+    function hundleCheckBox() {
         setCheckbox(true)
     }
 
     const handleFormSubmit = (e) => {
-        if (phoneNumber.length > 10 && name.length > 2 && email.includes('@')&& checkbox) {
+        if (phoneNumber.length > 10 && name.length > 2 && email.includes('@') && checkbox) {
             e.preventDefault();
             setShowModal(true);
-            setTimeout(() => {
-                setShowModal(false);
-                setIsPopup(prev => !prev);
-            }, 5000);
         }
         else {
             e.preventDefault();
@@ -53,7 +50,8 @@ function Popup({ active, setIsPopup, y }) {
 
     return (
         <>
-            {active &&
+            {
+            // active &&
                 showModal ?
                 (
                     <div className={styles.overlay} style={y === 0 ? { top: `${y}mm !important`, transform: `translate(0%, 0%)` } : { top: `${y}mm !important`, transform: `translate(0%, 0%)` }}>
@@ -63,7 +61,7 @@ function Popup({ active, setIsPopup, y }) {
                             <h1 className={styles.success_message}>Our career coaching team</h1>
                             <h1 className={styles.success_message}>will call you back shortly</h1>
 
-                        </div>
+                        </div> 
                     </div>
                 ) :
                 (<div className={styles.overlay} style={y === 0 ? { top: `${y}mm !important`, transform: `translate(0%, 0%)` } : { top: `${y}mm !important`, transform: `translate(0%, 0%)` }}>
@@ -91,7 +89,9 @@ function Popup({ active, setIsPopup, y }) {
                 </div>)
 
             }
+
         </>
+
     )
 }
 

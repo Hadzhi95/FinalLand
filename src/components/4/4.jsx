@@ -13,7 +13,7 @@ import InputMask from 'react-input-mask'
 import { useNavigate } from "react-router-dom";
 import { to } from "react-spring";
 import { Link } from "react-scroll";
-
+import { NewModal } from "../NewModal/NewModal";
 
 function Land4() {
   const navigate = useNavigate();
@@ -22,18 +22,24 @@ function Land4() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
 
+  const [open, setOpen] = useState(false);
+
+
   const buttonRef = useRef(null);
   const buttonRect = buttonRef.current && buttonRef.current.getBoundingClientRect();
 
   const [isPopup, setIsPopup] = useState(false);
   const [active, setIsActive] = useState(false);
 
+
+
   const [checkbox, setCheckbox] = useState(false)
 
   const handleSuccess = () => {
     if (phoneNumber.length > 10 && name.length > 2 && email.includes('@') && checkbox) {
-      setIsPopup(true);
+      // setIsPopup(true);
       setIsActive(true);
+      setOpen(true)
     }
     else {
       e.preventDefault();
@@ -74,6 +80,13 @@ function Land4() {
           </div>
         </div>
       </div>
+      <NewModal
+        content={<div onClose={() => setOpen(false)} >
+          <Popup setIsPopup={setIsPopup} active={active} y={Math.round(buttonRect?.top)} />
+        </div>}
+        open={open}
+        onClose={() => setOpen(false)}
+      />
     </>
   );
 }

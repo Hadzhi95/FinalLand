@@ -17,6 +17,8 @@ import Popup from '../Popup/Popup_new';
 import { useSpring, animated } from 'react-spring';
 import bg from './bg.png'
 import grouparrow from './grouparrow.svg'
+import { NewModal } from '../NewModal/NewModal';
+
 
 const Animation = () => {
   const [bgProps, setBgProps] = useSpring(() => ({
@@ -48,7 +50,7 @@ const Animation = () => {
 
   return (
     <div className="animation">
-      
+
       <animated.img
         className={styles.arrow}
         src={grouparrow}
@@ -69,7 +71,10 @@ function Land1() {
   const [isPopup, setIsPopup] = useState(false);
   const [active, setIsActive] = useState(false);
   const [animate, setAnimate] = useState(false);
-  
+
+  const [open, setOpen] = useState(false);
+
+
   const buttonRef = useRef(null);
   const buttonRect = buttonRef.current && buttonRef.current.getBoundingClientRect();
 
@@ -86,8 +91,9 @@ function Land1() {
     setIsMenuOpen(!isMenuOpen);
   };
   const handlePopupClick = () => {
-    setIsPopup(true);
-    setIsActive(true);
+    // setIsPopup(true);
+    // setIsActive(true);
+    setOpen(true)
   };
 
 
@@ -113,11 +119,11 @@ function Land1() {
 
   return (
     <>
-    
+
       <div className={styles.container}>
-      {isPopup && (
-              <Popup setIsPopup={setIsPopup} active={active} y={Math.round(buttonRect?.top)}/>
-            )}
+        {isPopup && (
+          <Popup setIsPopup={setIsPopup} active={active} y={Math.round(buttonRect?.top)} />
+        )}
         {animate && <Animation />}
         {/*<img className={styles.arrow} src={arrow} alt='' />
         <img className={styles.image} src={image} alt='' />*/}
@@ -204,7 +210,13 @@ function Land1() {
           <img src={desktopBg} className={styles.desktop_content_timer_backgraund} />
         </div>
       </div>
-
+      <NewModal
+        content={<div onClose={() => setOpen(false)} >
+          <Popup setIsPopup={setIsPopup} active={active} y={Math.round(buttonRect?.top)} />
+        </div>}
+        open={open}
+        onClose={() => setOpen(false)}
+      />
     </>
   );
 }

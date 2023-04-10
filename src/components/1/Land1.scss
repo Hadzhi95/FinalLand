@@ -158,12 +158,13 @@
     flex-direction: column;
     width: 700px;
     // margin-right: -100px;
-    margin-left: -5vw;
-    scale: 0.7;
+    margin-left: 7vw;
+    scale: 0.9;
     z-index: 4;
     // background: rgba(112, 26, 199, 0.8);
     border-radius: 40px;
     padding: 40px 29px 87px 29px;
+    gap: 20px;
 }
 
 .content_timer_title {
@@ -171,14 +172,16 @@
     text-justify: auto;
     width: 335px;
     height: 96px;
+    font-weight: 700;
     padding: 30px 0 0;
     font-family: 'Gotham Pro';
     font-style: Bold;
-    font-size: 40px;
+    font-size: 46px;
     line-height: 48px;
     text-align: center;
     color: #F9F9F9;
     margin-bottom: 30px;
+    
 }
 
 .time {
@@ -196,7 +199,7 @@
 }
 
 .dates {
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -216,14 +219,15 @@
 }
 
 .end {
-    width: 331px;
+    width: 400px;
     font-family: 'Gotham Pro';
     font-style: normal;
-    font-size: 20px;
+    font-size: 25px;
     line-height: 30px;
     text-align: center;
     color: #F9F9F9;
     margin-bottom: 20px;
+    font-weight: 500;
 }
 
 .submit_btn {
@@ -246,8 +250,8 @@
     display: block;
     top: 20px;
     float: right;
-    right: -100px;
-    scale: 0.8;
+    right: -185px;
+    scale: 0.9;
     z-index: 1;
     width: 100%;
     max-width: 758px;
@@ -338,7 +342,7 @@
         flex-direction: column;
         transform-style: preserve-3d;
         min-width: auto;
-        padding-bottom: 30px;
+        padding-bottom: 10px;
         //=============
         // overflow: hidden;
         // height: 932px;
@@ -395,26 +399,26 @@
         font-family: 'Gotham Pro';
         font-style: normal;
         font-weight: 700;
-        font-size: 33.1189px;
+        font-size: 40px;
         line-height: 40px;
         z-index: 1;
         margin-bottom: 10px;
-        margin-top: 56px;
+        // margin-top: 56px;
         padding: 0 3%;
-        min-width: 305px;
+        max-width: 400px;
 
     }
 
     .content_info {
-        font-family: 'Gotham Pro';
+        font-family: "Gotham Pro";
         font-style: normal;
-        font-weight: 700;
-        font-size: 11.9477px;
-        line-height: 18px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
         color: #1E1E1E;
         box-sizing: border-box;
         width: 100%;
-        max-width: 260px;
+        max-width: 350px;
         padding: 0 3%;
     }
 
@@ -466,12 +470,13 @@
         //=================
         scale: 1.3;
         margin-left: 0;
+        margin-top: 40px
     }
 
     .content_timer_backgraund {
         position: absolute;
         display: block;
-        top: 290px;
+        top: 250px;
         right: 0px;
         z-index: 7;
         width: 430px;
@@ -486,7 +491,6 @@
         height: 362px;
         left: -98px;
         top: 8px;
-
 
         background: rgba(112, 26, 199, 0.8);
         border-radius: 27.6517px;
@@ -507,7 +511,8 @@
         text-align: center;
         color: #F9F9F9;
         z-index: 9;
-
+        padding: 10px 0 0 0;
+        margin-bottom: 17px;
     }
 
     .time {
@@ -532,6 +537,7 @@
         gap: 26px;
         justify-content: center;
         align-items: center;
+        margin-bottom: 6px;
     }
 
     .date {
@@ -557,6 +563,7 @@
         text-align: center;
         color: #F9F9F9;
         z-index: 9;
+        margin-bottom: 0;
     }
 
     .submit_btn {

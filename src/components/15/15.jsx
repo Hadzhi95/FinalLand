@@ -8,6 +8,7 @@ import styles from './Land15.scss';
 import Popup from "../Popup/Popup_getcall";
 import InputMask from 'react-input-mask'
 import { useNavigate } from "react-router-dom";
+import { NewModal } from "../NewModal/NewModal";
 
 
 function Land15() {
@@ -16,19 +17,23 @@ function Land15() {
   const [phoneNumber, setPhoneNumber] = useState('+91');
   const buttonRef = useRef(null);
   const buttonRect = buttonRef.current && buttonRef.current.getBoundingClientRect();
-  
+
+  const [open, setOpen] = useState(false);
+
+
   const [isPopup, setIsPopup] = useState(false);
   const [active, setIsActive] = useState(false);
   const [checkbox, setCheckbox] = useState(false)
 
-  
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
 
   const handleSuccess = () => {
-    if (phoneNumber.length > 10 && name.length > 2 && email.includes('@')&& checkbox) {
-      setIsPopup(true);
+    if (phoneNumber.length > 10 && name.length > 2 && email.includes('@') && checkbox) {
+      // setIsPopup(true);
       setIsActive(true);
+      setOpen(true)
     }
     else {
       e.preventDefault();
@@ -39,9 +44,9 @@ function Land15() {
   return (
     <>
       <div className={styles.container}>
-      {isPopup && (
-              <Popup setIsPopup={setIsPopup} active={active} y={Math.round(buttonRect?.top)} />
-            )}
+        {isPopup && (
+          <Popup setIsPopup={setIsPopup} active={active} y={Math.round(buttonRect?.top)} />
+        )}
         <div className={styles.col}>
           <div className={styles.title}>
             Develop your skills for resume with Megacampus
@@ -60,19 +65,26 @@ function Land15() {
                   onChange={e => setPhoneNumber(e.target.value)} />
                 <span className={styles.icon_search}></span>
               </label>
-              <input className={styles.input} placeholder="Name" value={name} onChange={e => setName(e.target.value)} type='text'/>
+              <input className={styles.input} placeholder="Name" value={name} onChange={e => setName(e.target.value)} type='text' />
             </div>
             <div className={styles.colum}>
-              <input className={styles.email} placeholder="Email" value={email} onChange={e => setEmail(e.target.value)}/>
+              <input className={styles.email} placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
               <button onClick={handleSuccess} className={styles.btn} ref={buttonRef}>Get a call</button>
             </div>
             <div className={styles.check}>
-              <input className={styles.checkbox}onClick={() => setCheckbox((prev) => !prev)} type="checkbox" />
+              <input className={styles.checkbox} onClick={() => setCheckbox((prev) => !prev)} type="checkbox" />
               <span className={styles.checkbox__text}>By clicking the checkbox you agree to our <a className={styles.link} onClick={() => navigate('/privacy')} >privacy policy</a> and <a className={styles.link} onClick={() => navigate('/agreement')}>training agreement</a>.</span>
             </div>
           </div>
         </div>
       </div>
+      <NewModal
+        content={<div onClose={() => setOpen(false)} >
+          <Popup setIsPopup={setIsPopup} active={active} y={Math.round(buttonRect?.top)} />
+        </div>}
+        open={open}
+        onClose={() => setOpen(false)}
+      />
     </>
   );
 }

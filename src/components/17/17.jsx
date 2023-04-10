@@ -12,6 +12,7 @@ import Popup from "../Popup/Popup_getcall";
 import styles from './Land17.scss';
 import InputMask from 'react-input-mask'
 import { useNavigate } from "react-router-dom";
+import { NewModal } from "../NewModal/NewModal";
 
 
 function Land17() {
@@ -20,6 +21,9 @@ function Land17() {
   const [phoneNumber, setPhoneNumber] = useState('+91');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+
+  const [open, setOpen] = useState(false);
+
 
   const buttonRef = useRef(null);
   const buttonRect = buttonRef.current && buttonRef.current.getBoundingClientRect();
@@ -31,8 +35,9 @@ function Land17() {
 
   const handleSuccess = () => {
     if (phoneNumber.length > 10 && name.length > 2 && email.includes('@')&& checkbox) {
-      setIsPopup(true);
+      // setIsPopup(true);
       setIsActive(true);
+      setOpen(true)
     }
     else {
       e.preventDefault();
@@ -98,9 +103,15 @@ function Land17() {
               <span className={styles.checkbox__text}>By clicking the checkbox you agree to our <a className={styles.link} onClick={() => navigate('/privacy')} >privacy policy</a> and <a className={styles.link} onClick={() => navigate('/agreement')}>training agreement</a>.</span>
             </div>
           </div>
-
         </div>
       </div>
+      <NewModal
+        content={<div onClose={() => setOpen(false)} >
+          <Popup setIsPopup={setIsPopup} active={active} y={Math.round(buttonRect?.top)} />
+        </div>}
+        open={open}
+        onClose={() => setOpen(false)}
+      />
     </>
   );
 }

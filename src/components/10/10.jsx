@@ -5,6 +5,7 @@ import styles from './Land10.scss';
 import Popup from "../Popup/Popup_getcall";
 import InputMask from 'react-input-mask'
 import { useNavigate } from "react-router-dom";
+import { NewModal } from "../NewModal/NewModal";
 
 
 function Land10() {
@@ -13,10 +14,13 @@ function Land10() {
   const [phoneNumber, setPhoneNumber] = useState('+91');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  
+
+  const [open, setOpen] = useState(false);
+
+
   const buttonRef = useRef(null);
   const buttonRect = buttonRef.current && buttonRef.current.getBoundingClientRect();
-  
+
   const [isPopup, setIsPopup] = useState(false);
   const [active, setIsActive] = useState(false);
   const [checkbox, setCheckbox] = useState(false)
@@ -24,8 +28,10 @@ function Land10() {
 
   const handleSuccess = (e) => {
     if (phoneNumber.length > 10 && name.length > 2 && email.includes('@') && checkbox) {
-      setIsPopup(true);
+      // setIsPopup(true);
       setIsActive(true);
+      setOpen(true)
+
     }
     else {
       e.preventDefault();
@@ -35,9 +41,9 @@ function Land10() {
   return (
     <>
       <div className={styles.container}>
-      {isPopup && (
-              <Popup setIsPopup={setIsPopup} active={active} y={Math.round(buttonRect?.top)} />
-            )}
+        {isPopup && (
+          <Popup setIsPopup={setIsPopup} active={active} y={Math.round(buttonRect?.top)} />
+        )}
         <div className={styles.col}>
           <div className={styles.title}>
             Are you one of them?
@@ -59,9 +65,9 @@ function Land10() {
               <input className={styles.input} placeholder="Name" value={name} onChange={e => setName(e.target.value)} type='text' />
             </div>
             <div className={styles.colum}>
-              <input className={styles.email} placeholder="Email" value={email} onChange={e => setEmail(e.target.value)}/>
+              <input className={styles.email} placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
               <button className={styles.btn} onClick={handleSuccess} ref={buttonRef}>Get a call</button>
-              
+
             </div>
             <div className={styles.check}>
               <input className={styles.checkbox} onClick={() => setCheckbox((prev) => !prev)} type="checkbox" />
@@ -71,6 +77,13 @@ function Land10() {
 
         </div>
       </div>
+      <NewModal
+        content={<div onClose={() => setOpen(false)} >
+          <Popup setIsPopup={setIsPopup} active={active} y={Math.round(buttonRect?.top)} />
+        </div>}
+        open={open}
+        onClose={() => setOpen(false)}
+      />
     </>
   );
 }

@@ -1,7 +1,11 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+
 import styles from './TrainingAgreement.scss';
 
 function TrainingAgreement() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     return (
         <div className={styles.container}>
             <h1 className={styles.title}>Offer Agreement

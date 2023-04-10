@@ -34,17 +34,17 @@ const MobileMenu = ({ onclick }) => {
         <div className={style.contacts}>
             <div className={style.contact__item}>
                 <span>Student Support</span>
-                  <a className={style.contact} href='mailto:info@megacampus.com' target='blank'>info@megacampus.com</a>
+                  <a className={style.contact} href='mailto:info@megacampus.com' target='blank'>mega_india@megacampus.com</a>
             </div>
             <div className={style.contact__item}>
                   <span>Learn more about the courses:</span>
-                  <a className={style.contact} href='tel:+63 991 777-06-68' target='blank'>+63 991 777-06-68</a>
+                  <a className={style.contact} href='tel:+918851950019' target='blank'>+911171279793</a>
             </div>
         </div>
         <div className={style.social__wrapper}>
             <div className={style.social__block}>
               <a className={style.social__link} href="https://www.instagram.com/megacampus/" target="_blank"><img src={instLogo} /></a>
-              <a className={style.social__link} href="https://www.linkedin.com/company/megacampus/"><img src={inLogo} /></a>
+              <a className={style.social__link} href="https://www.linkedin.com/company/megacampusindia/"><img src={inLogo} /></a>
               <a className={style.social__link} href="https://ru-ru.facebook.com/megacampus.rus/"><img src={facebook} /></a>
               <a className={style.social__link} href="https://www.whatsapp.com/" target="_blank"><img src={whatsapp} /></a>
             </div>
