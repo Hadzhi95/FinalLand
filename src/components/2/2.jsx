@@ -37,7 +37,7 @@ function Land2() {
                 Career growth
               </div>
               <div className={styles.info_text}>
-                grow into senior level positions in marketing, research, and business analytics
+                Grow into senior level positions in marketing, research, and business analytics
               </div>
             </div>
             <div className={styles.block}>
@@ -45,7 +45,7 @@ function Land2() {
                 Flexibility
               </div>
               <div className={styles.info_text}>
-                work from anywhere. Most DMs work remotely., which provides you with a lot of flexibility, whether you work from home, in office, or while travelling
+                Work from anywhere. Most DMs work remotely., which provides you with a lot of flexibility, whether you work from home, in office, or while travelling
               </div>
             </div>
             <div className={styles.block}>
@@ -53,7 +53,7 @@ function Land2() {
                 Universal application
               </div>
               <div className={styles.info_text}>
-                digital marketers are sought-after in every field you can think of, from IT and finance to medicine and engineering
+                Digital marketers are sought-after in every field you can think of, from IT and finance to medicine and engineering
               </div>
             </div>
           </div>
