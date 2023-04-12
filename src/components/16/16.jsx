@@ -12,7 +12,7 @@ function Land16() {
         <div className={styles.col}>
           <div className={styles.row1}>
             <h3 className={styles.title1}>
-              <span className={styles.selection__title}>100% </span> Job guarantee
+              <span className={styles.selection__title}></span> Job guarantee
             </h3>
           </div>
           <div className={styles.row_mobile}>

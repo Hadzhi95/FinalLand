@@ -88,21 +88,21 @@ function Land14() {
         <img src={diplomMobile} className={styles.diplomMobile} />
         <div className={styles.col}>
           <div className={styles.row1}>
-            <img className={styles.inv} src={sber} alt="" />
+            {/* <img className={styles.inv} src={sber} alt="" /> */}
             {/* <img className={styles.inv1} src={sber1} alt="" /> */}
             <img className={styles.invent} src={hilton} alt="" />
             <img className={styles.inv} src={four} alt="" />
 
-            <img className={styles.sberMobile} src={sberMobile} alt="" />
+            {/* <img className={styles.sberMobile} src={sberMobile} alt="" /> */}
             <img className={styles.hiltonMobile} src={hilton} alt="" style={{ width: "250px" }} />
             <img className={styles.fourMobile} src={fourMobile} alt="" />
           </div>
           <div className={styles.row1}>
-            <img className={styles.inv} src={x5} alt="" />
+            {/* <img className={styles.inv} src={x5} alt="" /> */}
             <img className={styles.invent} src={cisco} alt="" />
             <img className={styles.inv} src={pepsico} alt="" />
 
-            <img className={styles.x5Mobile} src={x5Mobile} alt="" />
+            {/* <img className={styles.x5Mobile} src={x5Mobile} alt="" /> */}
             <img className={styles.ciscoMobile} src={ciscoMobile} alt="" />
             <img className={styles.pepsicoMobile} src={pepsicoMobile} alt="" />
 

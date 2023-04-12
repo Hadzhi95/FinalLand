@@ -93,7 +93,7 @@ function Land6() {
     ['Brand goal-setting', 'Doing brand audit : Market research, rival and target audience analysis',
       'Writing marketing brief']
   ],
-  ['Web-design and website building', ['Website prorotyping',
+  ['Web-design and website building', ['Website prototyping',
     'Unique selling proposition and mock-up design',
     'Making a website']
   ],

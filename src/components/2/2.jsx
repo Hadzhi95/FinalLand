@@ -21,7 +21,7 @@ function Land2() {
               <div className={styles.info_text}>
                 Due to the increasing popularity of online business and
                 e-commerce platforms, companies are seeking skilled digital marketers to help them achieve their business goals.
-                The industry is booming and keeps on growing every year.
+                The industry is booming and keeps on growing every year
               </div>
             </div>
             <div className={styles.block}>
@@ -29,7 +29,7 @@ function Land2() {
                 Stable and high-paid job
               </div>
               <div className={styles.info_text}>
-                Skilled digital marketers command high salaries, which increase as they gain experience.
+                Skilled digital marketers command high salaries, which increase as they gain experience
               </div>
             </div>
             <div className={styles.block}>
@@ -45,7 +45,7 @@ function Land2() {
                 Flexibility
               </div>
               <div className={styles.info_text}>
-                work from anywhere. Most DMs work remotely., which provides you with a lot of flexibility, whether you work from home, in office, or while travelling.
+                work from anywhere. Most DMs work remotely., which provides you with a lot of flexibility, whether you work from home, in office, or while travelling
               </div>
             </div>
             <div className={styles.block}>

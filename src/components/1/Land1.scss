@@ -199,11 +199,12 @@
 }
 
 .dates {
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin-bottom: 38px;
+    margin-left: 20px;
 }
 
 .date {
@@ -531,13 +532,21 @@
     }
 
     .dates {
+        // margin-top: -2%;
+        // width: 100%;
+        // display: flex;
+        // gap: 26px;
+        // justify-content: center;
+        // align-items: center;
+        // margin-bottom: 6px;
         margin-top: -2%;
         width: 100%;
         display: flex;
-        gap: 26px;
+        gap: 40px;
         justify-content: center;
         align-items: center;
         margin-bottom: 6px;
+        margin-left: 40px;
     }
 
     .date {
