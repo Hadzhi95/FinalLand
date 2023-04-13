@@ -77,7 +77,7 @@ function Land20() {
           </div>
           <div className={styles.messangers}>
             <a target='_blank' href="https://www.instagram.com/megacampus/"><img className={styles.image} src={inst} alt="" /></a>
-            <a target='_blank' href="https://www.linkedin.com/company/megacampus/"><img className={styles.image} src={linkedin} alt="" /></a>
+            <a target='_blank' href="https://www.linkedin.com/company/megacampusindia/"><img className={styles.image} src={linkedin} alt="" /></a>
             <a target='_blank' href="https://ru-ru.facebook.com/megacampus.rus/"><img className={styles.image} src={facebook} alt="" /></a>
             <a target='_blank' href="https://www.whatsapp.com/"><img className={styles.image} src={whatsapp} alt="" /></a>
           </div>
