@@ -1,6 +1,6 @@
 import React from "react";
 import styles from './Land12.scss';
-import macBook from './macBook.png';
+import macBook from './macBook-min.png';
 import macBookMobile from './macBook-mobile.png';
 
 function Land12() {

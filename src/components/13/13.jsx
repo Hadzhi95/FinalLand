@@ -5,9 +5,6 @@ import arrowsMobile from './arrows-mobile.png';
 import image1 from './image1.svg';
 import image2 from './image2.svg';
 import image3 from './image3.svg';
-import mobileImage1 from './image1-mobile.png';
-import mobileImage2 from './image2-mobile.png';
-import mobileImage3 from './image3-mobile.png';
 
 function Land13() {
   return (

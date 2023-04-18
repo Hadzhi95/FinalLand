@@ -22,14 +22,10 @@ function Land7() {
 
 
   const handlePopupClick = () => {
-    // setIsPopup(true);
-    // setIsActive(true);
     setOpen(true)
 
   };
   const handlePopupClick2 = () => {
-    // setIsPopup2(true);
-    // setIsActive2(true);
     setOpen(true)
 
   };

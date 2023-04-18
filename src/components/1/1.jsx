@@ -3,19 +3,15 @@ import MobileMenu from "../MobileMenu/MobileMenu";
 import { Link } from 'react-scroll'
 import styles from './Land1.scss';
 import arrowBlue1 from './arrow-blue1.svg';
-import arrowBlue from './arrow-blue.svg';
-import arrowGreen from './arrow-green.svg';
 import arrowGreen1 from './arrow-green1.svg';
-import arrowPink from './arrow-pink.svg';
 import arrowPink1 from './arrow-pink1.svg';
 import backgroundTimer from './background-timer.svg';
 import logo from './Logo.svg';
 import menu from './Меню.png';
 import desktopBg from './desktop-bg.png';
-//import Popup from '../Popup/Popup';
 import Popup from '../Popup/Popup_new';
 import { useSpring, animated } from 'react-spring';
-import bg from './bg.png'
+import bg from './bg-min.jpg'
 import grouparrow from './grouparrow.svg'
 import { NewModal } from '../NewModal/NewModal';
 
@@ -91,8 +87,6 @@ function Land1() {
     setIsMenuOpen(!isMenuOpen);
   };
   const handlePopupClick = () => {
-    // setIsPopup(true);
-    // setIsActive(true);
     setOpen(true)
   };
 
@@ -125,21 +119,10 @@ function Land1() {
           <Popup setIsPopup={setIsPopup} active={active} y={Math.round(buttonRect?.top)} />
         )}
         {animate && <Animation />}
-        {/*<img className={styles.arrow} src={arrow} alt='' />
-        <img className={styles.image} src={image} alt='' />*/}
-
-        {/* <div className={styles.arr_back}>
-          <img className={styles.arr_back_green} src={arrBackGreen} alt='' />
-          <img className={styles.arr_back_blue} src={arrBackGreen} alt='' />
-          <img className={styles.arr_back_red} src={arrBackGreen} alt='' />
-        </div> */}
         <header className={styles.header}>
           <img className={styles.arrowBlue_mob} src={arrowBlue1} alt='' />
           <img className={styles.arrowGreen_mob} src={arrowGreen1} alt='' />
           <img className={styles.arrowPink_mob} src={arrowPink1} alt='' />
-          <img className={styles.arrowBlue} src={arrowBlue} alt='' />
-          <img className={styles.arrowGreen} src={arrowGreen} alt='' />
-          <img className={styles.arrowPink} src={arrowPink} alt='' />
           <Link activeClass="active" to="syllabus" spy={true} smooth={true} duration={500} className={styles.header_btn}>
             SYLLABUS
           </Link>
@@ -172,9 +155,6 @@ function Land1() {
               get up-to-date practical skills, and
               secure yourself an exciting high-paid job in trending field of Digital Marketing
             </div>
-            {/* <img className={styles.arrowBlue} src={arrowBlue} alt='' />
-            <img className={styles.arrowGreen} src={arrowGreen} alt='' />
-            <img className={styles.arrowPink} src={arrowPink} alt='' /> */}
           </div>
           <div className={styles.content_timer_container}>
             <div className={styles.content_timer_title}>

@@ -1,10 +1,9 @@
 import React, { useRef } from "react";
 import styles from './Land9.scss';
 import image1 from './image1.svg';
-import image92 from './image92.png';
-import image93 from './image93.png';
-import image94 from './image94.png';
-import image95 from './image95.png';
+import image93 from './image93-min.png';
+import image94 from './image94-min.png';
+import image95 from './image95-min.png';
 import leftArrow from './LeftArrow.svg';
 import rightArrow from './RightArrow.svg';
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -44,9 +43,6 @@ function Land9() {
             >
               <SwiperSlide key={Math.random()}>
                   <img className={styles.swiper_images}  src={image1} />
-              </SwiperSlide>
-              <SwiperSlide key={Math.random()}>
-                  <img className={styles.swiper_images} src={image92} style={{ width: "600px", height: "662px", objectFit: "cover"}}/>
               </SwiperSlide>
               <SwiperSlide key={Math.random()}>
                   <img className={styles.swiper_images} src={image93} style={{ width: "600px", height: "662px", objectFit: "cover" }}/>

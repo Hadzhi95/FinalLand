@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, forwardRef } from "react";
 import styles from './Land8.scss';
 import image1 from './image1.svg';
-import image2 from './image2.png';
-import image3 from './image3.png';
-import image4 from './image4.png';
-import image5 from './image5.png';
+import image2 from './image2-min.png';
+import image3 from './image3-min.png';
+import image4 from './image4-min.png';
+import image5 from './image5-min.png';
 import leftArrow from './LeftArrow.svg';
 import rightArrow from './RightArrow.svg';
 import { Swiper, SwiperSlide } from "swiper/react";
