@@ -6,29 +6,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 
 const production = process.env.NODE_ENV === 'production';
-const express = require('express');
-const history = require('connect-history-api-fallback');
-
-const app = express();
-
-// Serve static files from the 'dist' directory
-app.use(express.static(path.join(__dirname, 'dist')));
-
-// Add middleware for history fallback
-app.use(history({
-  disableDotRule: true,
-  verbose: true
-}));
-
-// Serve index.html as the base page for all routes
-app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
-});
-
-// Start the server
-app.listen(process.env.PORT || 3000, function() {
-  console.log('App listening on port ' + (process.env.PORT || 3000) + '!');
-});
 
 
 module.exports = {
