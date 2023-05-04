@@ -8,11 +8,13 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const production = process.env.NODE_ENV === 'production';
 
 
+
 module.exports = {
   entry: { myAppName: path.resolve(__dirname, "./src/index.js") },
   output: {
     path: path.resolve(__dirname, "./dist"),
     filename: production ? '[name].[contenthash].js' : '[name].js',
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -78,4 +80,7 @@ module.exports = {
     }),
   ],
   mode: production ? 'production' : 'development',
+  devServer: {
+    historyApiFallback: true,
+  },
 };
