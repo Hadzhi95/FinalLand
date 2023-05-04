@@ -1,12 +1,10 @@
 import React, { useRef } from "react";
 import styles from './Land14.scss';
-import image1 from './image1.svg'
-import image142 from './image142.svg'
-import image143 from './image143-min.png'
+import image1 from './image1.jpg'
+import image142 from './image142.jpg'
+import image143 from './image-143.png'
 import image144 from './image144.png'
-import image145 from './image145-min.png'
-import leftArrow from './LeftArrow.svg';
-import rightArrow from './RightArrow.svg';
+import image145 from './image-145.png'
 import pepsico from './6.png';
 import cisco from './5.png';
 import four from './3.png';

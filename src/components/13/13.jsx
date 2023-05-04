@@ -3,7 +3,7 @@ import styles from './Land13.scss';
 import arrows from './Arrows.svg';
 import arrowsMobile from './arrows-mobile.png';
 import image1 from './image1.svg';
-import image2 from './image2.svg';
+import image2 from './image2.jpg';
 import image3 from './image3.svg';
 
 function Land13() {

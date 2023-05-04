@@ -52,7 +52,7 @@
 
 .tel {
     box-sizing: border-box;
-    width: 100%;
+    width: 321.26px;
     height: 82.81px;
     background: rgba(249, 249, 249, 0.25);
     border: 0.7px solid rgba(30, 30, 30, 0.15);
@@ -216,6 +216,22 @@ label {
 }
 
 @media (min-width: 965px) and (max-width: 1075px) {
+    .tel {
+        // width: 100%;
+        width: 321.26px;
+        height: 82.81px;
+        background: rgba(249, 249, 249, 0.25);
+        // background-color: rgb(75, 223, 223);
+        border: 0.7px solid rgba(30, 30, 30, 0.15);
+        border-radius: 7px;
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15.4754px;
+        line-height: 19px;
+        color: #1E1E1E
+    }
+
     .container {
         display: flex;
         justify-content: center;

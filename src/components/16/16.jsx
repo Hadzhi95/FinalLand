@@ -1,8 +1,6 @@
 import React from "react";
 import styles from './Land16.scss';
-// import image from './image.svg'
 import image from './diplom-image.jpg'
-
 import diplomMobile from './diplom-mobile1.png'
 
 function Land16() {

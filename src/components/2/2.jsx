@@ -1,7 +1,7 @@
 import React from "react";
 import styles from './Land2.scss';
 import back from './back.svg'
-import miniBack from './miniBack.svg'
+import miniBack from './miniBack.jpg'
 
 function Land2() {
   return (

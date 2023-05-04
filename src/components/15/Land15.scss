@@ -73,7 +73,6 @@ label {
     position: relative;
     display: inline-block;
     margin: 9.24px 9.24px 9.24px 0px;
-
 }
 
 input[type='tel'] {
@@ -234,7 +233,7 @@ span.icon_search {
 
     .tel {
         box-sizing: border-box;
-        width: 100%;
+        width: 221.26px;
         height: 82.81px;
         background: rgba(249, 249, 249, 0.25);
         border: 0.7px solid rgba(30, 30, 30, 0.15);
@@ -251,7 +250,7 @@ span.icon_search {
     }
     
     label {
-        width: 221.26px;
+        width: 221.26px !important;
         position: relative;
         display: inline-block;
         margin: 9.24px 9.24px 9.24px 0px;

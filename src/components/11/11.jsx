@@ -1,7 +1,7 @@
 import React from "react";
 import styles from './Land11.scss';
-import back from './back.svg'
-import getDiplom from './getDiplom.svg'
+// import getDiplom from './getDiplom.svg'
+import getDiplom from './getDiplom.jpg'
 
 function Land11() {
   return (

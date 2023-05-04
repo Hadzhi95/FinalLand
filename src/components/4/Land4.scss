@@ -151,6 +151,21 @@ span.icon_search {
         display: none;
     }
 
+    .tel{
+        // width: 100%;
+        width: 321.26px;
+        height: 82.81px;
+        background: rgba(249, 249, 249, 0.05);
+        border: 0.7px solid rgba(249, 249, 249, 0.15);
+        border-radius: 7px;
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15.4754px;
+        line-height: 19px;
+        color: rgba(249, 249, 249, 0.8);
+    }
+
     .container {
         padding: 70px 20px;
         display: flex;
@@ -195,6 +210,20 @@ span.icon_search {
 }
 
 @media (min-width: 995px) and (max-width: 1080px) {
+    .tel{
+        // width: 100%;
+        width: 321.26px;
+        height: 82.81px;
+        background: rgba(249, 249, 249, 0.05);
+        border: 0.7px solid rgba(249, 249, 249, 0.15);
+        border-radius: 7px;
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15.4754px;
+        line-height: 19px;
+        color: rgba(249, 249, 249, 0.8);
+    }
     .card {
         display: none;
     }

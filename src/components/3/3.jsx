@@ -1,8 +1,8 @@
 import React from "react";
 import styles from './Land3.scss';
-import img from './Card.svg';
+import img from './Card.jpg';
 import cards from './AnotherCards.svg'
-import allNeeded from './allNeeded.svg'
+import allNeeded from './allNeeded.jpg'
 
 function Land3() {
   return (

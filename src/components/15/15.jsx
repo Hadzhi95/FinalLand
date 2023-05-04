@@ -9,6 +9,7 @@ import Popup from "../Popup/Popup_getcall";
 import InputMask from 'react-input-mask'
 import { useNavigate } from "react-router-dom";
 import { NewModal } from "../NewModal/NewModal";
+import axios from 'axios';
 
 
 function Land15() {
@@ -23,19 +24,31 @@ function Land15() {
 
   const [isPopup, setIsPopup] = useState(false);
   const [active, setIsActive] = useState(false);
-  const [checkbox, setCheckbox] = useState(false)
+  const [checkbox, setCheckbox] = useState(true)
 
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
 
-  const handleSuccess = () => {
+  const handleSuccess = async () => {
     if (phoneNumber.length > 10 && name.length > 2 && email.includes('@') && checkbox) {
-      // setIsPopup(true);
-      setIsActive(true);
-      setOpen(true)
-    }
-    else {
+      try {
+        const response = await axios.post('/landings/digitalmarketing/amocrm/amo.php', {
+          phoneNumber,
+          name,
+          email
+        });
+        // setIsPopup(true);
+        console.log(response.data);
+        setIsActive(true);
+        setOpen(true)
+      } catch (error) {
+        console.error(error);
+        setIsActive(true);
+        setOpen(true)
+      }
+
+    } else {
       e.preventDefault();
     }
   }
@@ -72,7 +85,7 @@ function Land15() {
               <button onClick={handleSuccess} className={styles.btn} ref={buttonRef}>Get a call</button>
             </div>
             <div className={styles.check}>
-              <input className={styles.checkbox} onClick={() => setCheckbox((prev) => !prev)} type="checkbox" />
+              <input className={styles.checkbox} onClick={() => setCheckbox((prev) => !prev)} checked={checkbox} type="checkbox" />
               <span className={styles.checkbox__text}>By clicking the checkbox you agree to our <a className={styles.link} onClick={() => navigate('/privacy')} >privacy policy</a> and <a className={styles.link} onClick={() => navigate('/agreement')}>training agreement</a>.</span>
             </div>
           </div>

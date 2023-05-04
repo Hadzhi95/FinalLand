@@ -5,13 +5,14 @@ import styles from './Land1.scss';
 import arrowBlue1 from './arrow-blue1.svg';
 import arrowGreen1 from './arrow-green1.svg';
 import arrowPink1 from './arrow-pink1.svg';
+
 import backgroundTimer from './background-timer.svg';
 import logo from './Logo.svg';
 import menu from './Меню.png';
 import desktopBg from './desktop-bg.png';
 import Popup from '../Popup/Popup_new';
 import { useSpring, animated } from 'react-spring';
-import bg from './bg-min.jpg'
+import bg from './bg2.jpg'
 import grouparrow from './grouparrow.svg'
 import { NewModal } from '../NewModal/NewModal';
 

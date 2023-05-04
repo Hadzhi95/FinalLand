@@ -2,12 +2,12 @@ import React, { useEffect, useRef, useState, useCallback } from "react";
 import PhoneInput from 'react-phone-number-input'
 import "react-phone-number-input/style.css";
 import en from 'react-phone-number-input/locale/en.json'
+import axios from 'axios';
 
 
 import styles from './Land4.scss';
 import card from './Card.svg'
 import india from './india.svg'
-import Success from "./Success";
 import Popup from "../Popup/Popup_getcall";
 import InputMask from 'react-input-mask'
 import { useNavigate } from "react-router-dom";
@@ -33,15 +33,27 @@ function Land4() {
 
 
 
-  const [checkbox, setCheckbox] = useState(false)
+  const [checkbox, setCheckbox] = useState(true)
 
-  const handleSuccess = () => {
+  const handleSuccess = async () => {
     if (phoneNumber.length > 10 && name.length > 2 && email.includes('@') && checkbox) {
-      // setIsPopup(true);
-      setIsActive(true);
-      setOpen(true)
-    }
-    else {
+      try {
+        const response = await axios.post('/landings/digitalmarketing/amocrm/amo.php', {
+          phoneNumber,
+          name,
+          email
+        });
+        // setIsPopup(true);
+        console.log(response.data);
+        setIsActive(true);
+        setOpen(true)
+      } catch (error) {
+        console.error(error);
+        setIsActive(true);
+        setOpen(true)
+      }
+
+    } else {
       e.preventDefault();
     }
   }
@@ -70,12 +82,12 @@ function Land4() {
             <input className={styles.email} value={name} onChange={e => setName(e.target.value)} placeholder="Name" type='text' />
           </div>
           <div className={styles.col}>
-            <input className={styles.email} placeholder="Email" type='email' value={email} onChange={e => setEmail(e.target.value)}/>
+            <input className={styles.email} placeholder="Email" type='email' value={email} onChange={e => setEmail(e.target.value)} />
             <button onClick={handleSuccess} className={styles.btn} ref={buttonRef}>Get a call</button>
 
           </div>
           <div className={styles.check}>
-            <input onClick={() => setCheckbox((prev) => !prev)} className={styles.checkbox} type="checkbox" />
+            <input onClick={() => setCheckbox((prev) => !prev)} checked={checkbox} className={styles.checkbox} type="checkbox" />
             <span className={styles.checkbox__text}>By clicking the checkbox you agree to our <a className={styles.link} onClick={() => navigate('/privacy')} >privacy policy</a> and <a className={styles.link} onClick={() => navigate('/agreement')}>training agreement</a>.</span>
           </div>
         </div>

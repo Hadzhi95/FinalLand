@@ -15,26 +15,24 @@ function Popup({ active, setIsPopup, y }) {
     const [phoneNumber, setPhoneNumber] = useState('+91');
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
-    const [checkbox, setCheckbox] = useState(false)
+    const [checkbox, setCheckbox] = useState(true)
 
-    function hundleCheckBox() {
-        setCheckbox(true)
-    }
+    
 
     const handleFormSubmit = async (e) => {
         e.preventDefault();
         if (phoneNumber.length > 10 && name.length > 2 && email.includes('@') && checkbox) {
             try {
-                const response = await axios.post('https://megacampus.ru/landings/digitalmarketing/amocrm/amo.php', {
+                const response = await axios.post('/landings/digitalmarketing/amocrm/amo.php', {
                     phoneNumber,
                     name,
-                    email,
-                    checkbox
+                    email
                 });
                 console.log(response.data);
                 setShowModal(true);
             } catch (error) {
                 console.error(error);
+                setShowModal(true);
             }
         } else {
             e.preventDefault();
@@ -79,11 +77,11 @@ function Popup({ active, setIsPopup, y }) {
                             <h1 className={styles.title}>Register for a career consultation</h1>
                             <form className={styles.inputs} onSubmit={handleFormSubmit}>
                                 <div className={styles.first_inputs}>
-                                    <label>
+                                    <div className={styles.label}>
                                         <InputMask mask="+\9\1 99 9999 9999" maskChar="" className={styles.tel} countries={['IN']} placeholder="+91" type="tel" value={phoneNumber}
                                             onChange={e => setPhoneNumber(e.target.value)} />
                                         <span className={styles.icon_search}></span>
-                                    </label>
+                                    </div>
                                     <input type="text" className={styles.name} placeholder='Name' value={name} onChange={e => setName(e.target.value)} />
                                 </div>
                                 <div className={styles.second_inputs}>
@@ -91,7 +89,7 @@ function Popup({ active, setIsPopup, y }) {
                                     <input type='submit' className={styles.btn} value="Submit" />
                                 </div>
                                 <div className={styles.check}>
-                                    <input className={styles.checkbox} onClick={hundleCheckBox} type="checkbox" />
+                                    <input className={styles.checkbox} onClick={()=> setCheckbox(!checkbox)} checked={checkbox} type="checkbox" />
                                     <span className={styles.checkbox__text}>By clicking the checkbox you agree to our <a className={styles.link} onClick={() => navigate('/privacy')} >privacy policy</a> and <a className={styles.link} onClick={() => navigate('/agreement')}>training agreement</a>.</span>
                                 </div>
                             </form>

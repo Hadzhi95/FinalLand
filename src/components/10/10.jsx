@@ -6,6 +6,7 @@ import Popup from "../Popup/Popup_getcall";
 import InputMask from 'react-input-mask'
 import { useNavigate } from "react-router-dom";
 import { NewModal } from "../NewModal/NewModal";
+import axios from 'axios';
 
 
 function Land10() {
@@ -23,17 +24,28 @@ function Land10() {
 
   const [isPopup, setIsPopup] = useState(false);
   const [active, setIsActive] = useState(false);
-  const [checkbox, setCheckbox] = useState(false)
+  const [checkbox, setCheckbox] = useState(true)
 
 
-  const handleSuccess = (e) => {
+  const handleSuccess = async () => {
     if (phoneNumber.length > 10 && name.length > 2 && email.includes('@') && checkbox) {
-      // setIsPopup(true);
-      setIsActive(true);
-      setOpen(true)
+      try {
+        const response = await axios.post('/landings/digitalmarketing/amocrm/amo.php', {
+          phoneNumber,
+          name,
+          email
+        });
+        // setIsPopup(true);
+        console.log(response.data);
+        setIsActive(true);
+        setOpen(true)
+      } catch (error) {
+        console.error(error);
+        setIsActive(true);
+        setOpen(true)
+      }
 
-    }
-    else {
+    } else {
       e.preventDefault();
     }
   }
@@ -70,7 +82,7 @@ function Land10() {
 
             </div>
             <div className={styles.check}>
-              <input className={styles.checkbox} onClick={() => setCheckbox((prev) => !prev)} type="checkbox" />
+              <input className={styles.checkbox} onClick={() => setCheckbox((prev) => !prev)} checked={checkbox} type="checkbox" />
               <span className={styles.checkbox__text}>By clicking the checkbox you agree to our <a className={styles.link} onClick={() => navigate('/privacy')} >privacy policy</a> and <a className={styles.link} onClick={() => navigate('/agreement')}>training agreement</a>.</span>
             </div>
           </div>

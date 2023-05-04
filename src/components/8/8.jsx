@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, forwardRef } from "react";
 import styles from './Land8.scss';
-import image1 from './image1.svg';
-import image2 from './image2-min.png';
-import image3 from './image3-min.png';
-import image4 from './image4-min.png';
+// import image1 from './image1.svg';
+import image1 from './image1.jpg';
+import image2 from './image-2.png';
+import image3 from './image-3.png';
+import image4 from './image-4.png';
 import image5 from './image5-min.png';
 import leftArrow from './LeftArrow.svg';
 import rightArrow from './RightArrow.svg';
@@ -61,7 +62,7 @@ function Land8() {
                }}
             >
               <SwiperSlide key={Math.random()}>
-                <img className={styles.swiper_images} src={image1} />
+                <img className={styles.swiper_images} src={image1} style={{ height: "662px" }}/>
               </SwiperSlide>
               <SwiperSlide key={Math.random()}>
                 <img className={styles.swiper_images} src={image2} style={{ width: "922px", height: "662px", objectFit: "cover" }}/>

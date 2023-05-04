@@ -56,7 +56,8 @@
 
 .tel {
     box-sizing: border-box;
-    width: 100%;
+    width: 321.26px;
+    // width: 100%;
     height: 82.81px;
     background: rgba(249, 249, 249, 0.25);
     border: 0.7px solid rgba(30, 30, 30, 0.15);
@@ -71,7 +72,7 @@
     // padding: 31px;
 }
 
-label {
+.label {
     width: 321.26px;
     position: relative;
     display: inline-block;
@@ -223,6 +224,22 @@ span.icon_search {
         line-height: 150%;
         color: #F9F9F9;
     }
+    .tel {
+        box-sizing: border-box;
+        width: 100%;
+        height: 82.81px;
+        background: rgba(249, 249, 249, 0.25);
+        border: 0.7px solid rgba(30, 30, 30, 0.15);
+        border-radius: 7px;
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15.4754px;
+        line-height: 19px;
+        color: rgba(249, 249, 249, 0.8);
+        // margin: 9.24px 9.24px 9.24px 0;
+        // padding: 31px;
+    }
 }
 @media (min-width: 710px) and (max-width: 1030px) {
     .tel {
@@ -242,7 +259,7 @@ span.icon_search {
         // padding: 31px;
     }
     
-    label {
+    .label {
         width: 221.26px;
         position: relative;
         display: inline-block;
@@ -347,7 +364,7 @@ span.icon_search {
         // padding: 31px;
     }
     
-    label {
+    .label {
         width: 221.26px;
         position: relative;
         display: inline-block;
@@ -505,7 +522,7 @@ span.icon_search {
         // padding: 31px;
     }
     
-    label {
+    .label {
         width: 100%;
         position: relative;
         display: inline-block;
