@@ -14,7 +14,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "./dist"),
     filename: production ? '[name].[contenthash].js' : '[name].js',
-    publicPath: '/'
+    // publicPath: '/'
   },
   module: {
     rules: [
@@ -80,7 +80,7 @@ module.exports = {
     }),
   ],
   mode: production ? 'production' : 'development',
-  devServer: {
-    historyApiFallback: true,
-  },
+  // devServer: {
+  //   historyApiFallback: true,
+  // },
 };
