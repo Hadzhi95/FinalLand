@@ -186,9 +186,9 @@ function Land1() {
             <button onClick={handlePopupClick} ref={buttonRef} className={styles.submit_btn}>
               Submit
             </button>
+          <img src={desktopBg} className={styles.desktop_content_timer_backgraund} />
           </div>
           <img src={backgroundTimer} className={styles.content_timer_backgraund} />
-          <img src={desktopBg} className={styles.desktop_content_timer_backgraund} />
         </div>
       </div>
       <NewModal

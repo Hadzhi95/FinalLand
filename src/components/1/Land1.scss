@@ -181,7 +181,7 @@
     text-align: center;
     color: #F9F9F9;
     margin-bottom: 30px;
-    
+
 }
 
 .time {
@@ -247,13 +247,23 @@
 }
 
 .desktop_content_timer_backgraund {
+    // position: absolute;
+    // display: block;
+    // top: 20px;
+    // float: right;
+    // right: -185px;
+    // scale: 0.9;
+    // z-index: 1;
+    // width: 100%;
+    // max-width: 758px;
+
     position: absolute;
     display: block;
-    top: 20px;
+    top: 65px;
     float: right;
-    right: -185px;
-    scale: 0.9;
-    z-index: 1;
+    right: 70px;
+    scale: 1.2;
+    z-index: -1;
     width: 100%;
     max-width: 758px;
 }
@@ -288,10 +298,13 @@
     .content_timer_container {
         margin-right: -50px;
         margin-left: -300px;
+        scale: 0.8;
     }
 
     .desktop_content_timer_backgraund {
-        margin-right: 200px;
+        // margin-right: 200px;
+        scale: 1.1;
+        top: 30px;
     }
 
     .header {
@@ -319,10 +332,14 @@
     .content_timer_container {
         margin-right: -150px;
         margin-left: -600px;
+        scale: 0.8;
     }
 
     .desktop_content_timer_backgraund {
-        margin-right: 250px;
+        // margin-right: 250px;
+        scale: 1.05;
+        top: 30px;
+        right: 60px;
     }
 
     .header {

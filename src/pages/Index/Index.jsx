@@ -1,31 +1,32 @@
-import React, { useRef } from "react";
+import React, { useRef, lazy, Suspense } from "react";
 import styles from './Index.scss';
-import Land1 from "../../components/1/1";
-import Land2 from "../../components/2/2";
-import Land3 from "../../components/3/3";
-import Land4 from "../../components/4/4";
-import Land5 from "../../components/5/5";
-import Land6 from "../../components/6/6";
-import Land7 from "../../components/7/7";
-import Land8 from "../../components/8/8";
-import Land9 from "../../components/9/9";
-import Land10 from "../../components/10/10";
-import Land11 from "../../components/11/11";
-import Land12 from "../../components/12/12";
-import Land13 from "../../components/13/13";
-import Land14 from "../../components/14/14";
-import Land15 from "../../components/15/15";
-import Land16 from "../../components/16/16";
-import Land17 from "../../components/17/17";
-import Land18 from "../../components/18/18";
-import Land19 from "../../components/19/19";
-import Land20 from "../../components/20/20";
+const Land1 = lazy(() => import('../../components/1/1'));
+const Land2 = lazy(() => import('../../components/2/2'));
+const Land3 = lazy(() => import('../../components/3/3'));
+const Land4 = lazy(() => import('../../components/4/4'));
+const Land5 = lazy(() => import('../../components/5/5'));
+const Land6 = lazy(() => import('../../components/6/6'));
+const Land7 = lazy(() => import('../../components/7/7'));
+const Land8 = lazy(() => import('../../components/8/8'));
+const Land9 = lazy(() => import('../../components/9/9'));
+const Land10 = lazy(() => import('../../components/10/10'));
+const Land11 = lazy(() => import('../../components/11/11'));
+const Land12 = lazy(() => import('../../components/12/12'));
+const Land13 = lazy(() => import('../../components/13/13'));
+const Land14 = lazy(() => import('../../components/14/14'));
+const Land15 = lazy(() => import('../../components/15/15'));
+const Land16 = lazy(() => import('../../components/16/16'));
+const Land17 = lazy(() => import('../../components/17/17'));
+const Land18 = lazy(() => import('../../components/18/18'));
+const Land19 = lazy(() => import('../../components/19/19'));
+const Land20 = lazy(() => import('../../components/20/20'));
 
 function Index() {
   const mentorsRef = useRef(null);
   return (
     <>
       <div className={styles.container}>
+      <Suspense fallback={<div></div>}>
         <Land1 />
         <Land2 />
         <Land3 />
@@ -46,6 +47,7 @@ function Index() {
         <Land18 />
         <Land19 />
         <Land20 />
+        </Suspense>
       </div>
 
     </>
